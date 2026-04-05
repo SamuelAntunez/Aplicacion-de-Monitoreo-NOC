@@ -54,17 +54,18 @@ export class Server {
         //     }
         // );
 
-        CronService.createJob(
-            '*/5 * * * * *',
-            () => {
-                const url = 'https://www.goole.com';
-                new CheckServicesMultiple(
-                    [fsLogRepository, mongoLogRepository, pgLogRepository],
-                    () => console.log(`url ${url}`),
-                    (error) => console.error(`Error: url ${url} is not working`)
-                ).execute(url)
-            }
-        );
+        //! Cron Service Multiple
+        // CronService.createJob(
+        //     '*/5 * * * * *',
+        //     () => {
+        //         const url = 'https://www.goole.com';
+        //         new CheckServicesMultiple(
+        //             [fsLogRepository, mongoLogRepository, pgLogRepository],
+        //             () => console.log(`url ${url}`),
+        //             (error) => console.error(`Error: url ${url} is not working`)
+        //         ).execute(url)
+        //     }
+        // );
 
     }
 }
