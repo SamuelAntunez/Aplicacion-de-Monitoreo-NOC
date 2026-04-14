@@ -41,8 +41,8 @@ coverage/
 
 #Logs
 logs/
-mongo/
-postgres/
+/mongo
+/postgres
 prisma/
 
 .env 
